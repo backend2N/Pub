@@ -1,22 +1,4 @@
--- types tábla létrehozása
-CREATE TABLE types (
- id INT PRIMARY KEY,
- type VARCHAR(30)
-);
--- packages tábla létrehozása
-CREATE TABLE packages (
- id INT PRIMARY KEY,
- package VARCHAR(30)
-);
--- drinks tábla létrehozása
-CREATE TABLE drinks (
- drink VARCHAR(30),
- amount INT,
- price INT,
- type_id INT,
- package_id INT
-);
--- types tábla feltöltése
+
 INSERT INTO types (id, type)
 VALUES
  (1, 'Kávé'),
@@ -39,7 +21,8 @@ VALUES
  (18, 'Kakaó dupla'),
  (19, 'Gyümölcs tea citrom'),
  (20, 'Kávé espresso');
--- packages tábla feltöltése
+
+
 INSERT INTO packages (id, package)
 VALUES
  (1, 'Kis'),
@@ -62,7 +45,8 @@ VALUES
  (18, 'Karton doboz'),
  (19, 'Fém doboz'),
  (20, 'Egyedi csomagolás');
--- drinks tábla feltöltése
+
+
 INSERT INTO drinks (drink, amount, price, type_id, package_id)
 VALUES
  ('Kávé', 200, 500, 1, 1),
